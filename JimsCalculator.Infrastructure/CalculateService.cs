@@ -1,6 +1,8 @@
 ﻿using JimsCalculator.Application;
 using JimsCalculator.Domain.DTO;
 using System;
+using System.Collections.Generic;
+
 namespace JimsCalculator.Infrastructure
 {
     public class CalculateService : ICalculateService
@@ -24,11 +26,13 @@ namespace JimsCalculator.Infrastructure
                     throw new NotImplementedException();
             }
         }
+
         private CalculatorResultDto Add(CalculatorRequestDto solutionPayload)
         {
             var result = new CalculatorResultDto();
             result.Solution = $"{solutionPayload.InputOne} + {solutionPayload.InputTwo}";
             result.Result = solutionPayload.InputOne + solutionPayload.InputTwo;
+
             return result;
         }
 
@@ -37,6 +41,7 @@ namespace JimsCalculator.Infrastructure
             var result = new CalculatorResultDto();
             result.Solution = $"{solutionPayload.InputOne} / {solutionPayload.InputTwo}";
             result.Result = solutionPayload.InputOne / solutionPayload.InputTwo;
+
             return result;
         }
 
@@ -45,6 +50,7 @@ namespace JimsCalculator.Infrastructure
             var result = new CalculatorResultDto();
             result.Solution = $"{solutionPayload.InputOne} * {solutionPayload.InputTwo}";
             result.Result = solutionPayload.InputOne * solutionPayload.InputTwo;
+
             return result;
         }
 
@@ -53,6 +59,7 @@ namespace JimsCalculator.Infrastructure
             var result = new CalculatorResultDto();
             result.Solution = $"{solutionPayload.InputOne} - {solutionPayload.InputTwo}";
             result.Result = solutionPayload.InputOne - solutionPayload.InputTwo;
+
             return result;
         }
     }
