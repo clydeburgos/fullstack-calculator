@@ -1,7 +1,6 @@
 ﻿using JimsCalculator.Application;
 using JimsCalculator.Domain.DTO;
 using System;
-using System.Collections.Generic;
 
 namespace JimsCalculator.Infrastructure
 {

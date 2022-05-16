@@ -6,6 +6,5 @@ namespace JimsCalculator.Application
     public interface ICalculateService
     {
         CalculatorResultDto Calculate(CalculatorRequestDto solutionPayload);
-        List<CalculatorResultDto> GetHistory();
     }
 }
