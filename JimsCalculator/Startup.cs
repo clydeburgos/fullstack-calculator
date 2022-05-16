@@ -21,6 +21,8 @@ namespace JimsCalculator
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.ConfigureJimsCoreServices();
+            services.AddCors();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -50,7 +52,7 @@ namespace JimsCalculator
             }
 
             app.UseRouting();
-
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

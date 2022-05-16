@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="d-flex justify-content-center">
+    <div class="bg-light col-sm-6 p-2">
+      <div class="input-group input-group-sm col-sm-12 m-0 p-0 pb-2">
+        <div class="form-control text-sm-right result-display">{{result}}</div>
+      </div>
+
+      <div class="input-group input-group-sm col-sm-12 m-0 p-0 pb-2">
+        <div class="col-sm-12 form-control text-lg-right">{{input}}</div>
+      </div>
+   
+      
+   
+      <div class="col-sm-12 p-1 m-0">
+        <button class="btn btn-danger col-sm-6" type="button" (click)="clearAll()">C</button>
+        <button class="btn btn-warning col-sm-3" type="button" (click)="removeLastInput()"> > </button>
+        <button class="btn btn-secondary col-sm-3" type="button" (click)="pressOperator('/')">/</button>
+      </div>
+   
+      <div class="col-sm-12 p-1 m-0">
+        <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressInput('7')">7</button>
+        <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressInput('8')">8</button>
+        <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressInput('9')">9</button>
+        <button class="btn btn-lg btn-secondary col-sm-3 p-1" type="button" (click)="pressOperator('*')">X</button>
+      </div>
+      <div class="col-sm-12 p-1 m-0">
+        <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressInput('4')">4</button>
+        <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressInput('5')">5</button>
+        <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressInput('6')">6</button>
+        <button class="btn btn-lg btn-secondary col-sm-3 p-1" type="button" (click)="pressOperator('-')">-</button>
+      </div>
+      <div class="col-sm-12 p-1 m-0">
+        <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressInput('1')">1</button>
+        <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressInput('2')">2</button>
+        <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressInput('3')">3</button>
+        <button class="btn btn-lg btn-secondary col-sm-3 p-1" type="button" (click)="pressOperator('+')">+</button>
+      </div>
+      <div class="col-sm-12 p-1 m-0">
+        <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressInput('.')">.</button>
+        <button class="btn btn-lg btn-outline-secondary col-sm-3 p-1" type="button" (click)="pressInput('0')">0</button>
+        <button class="btn btn-lg btn-success col-sm-6 p-1" type="button" (click)="processResult()">=</button>
+      </div>
+    </div>
+  </div>
+  
